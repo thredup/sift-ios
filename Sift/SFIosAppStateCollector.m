@@ -113,7 +113,11 @@ static const NSTimeInterval SF_MOTION_SENSOR_INTERVAL = 0.5;  // Unit: second.
         _allowUsingMotionSensors = NO;
 
         // Create a CMMotionManager object but don't start/stop motion sensors unless we are allowed to do so.
+        /*
+         * thredUP Override - Disabling CMMotionManager initialization from blocking main thread. We are not currently
+         * enabling this functionality so we will just remove its creation.
         _motionManager = [CMMotionManager new];
+        */
         _numMotionStarted = 0;
 
         _operationQueue = [NSOperationQueue new];
