@@ -1,0 +1,6 @@
+framework module Sift {
+  umbrella header "Sift.h"
+
+  export *
+  module * { export * }
+}
